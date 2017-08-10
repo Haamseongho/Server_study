@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SNS별 로그인페이지</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<p>로그인 페이지</p>
+<form action="/auth/facebook" method="get">
+    <input type="submit" value="페이스북 로그인 하러가기" name="fb_login">
+</form>
+<form action="/auth/kakao" method="get">
+    <input type="submit" value="카카오톡 로그인 하러가기" name="kk_login">
+</form>
+<form action="/auth/naver" method="get">
+    <input type="submit" value="네이버 로그인 하러가기" name="nv_login">
+</form>
+
+</body>
+</html>
