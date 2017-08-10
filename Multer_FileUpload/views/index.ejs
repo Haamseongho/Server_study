@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css'/>
+  <link rel='stylesheet' href='/stylesheets/style.css'/>
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"
+          data-do-not-move="true" data-provides="jQuery"></script>
+</head>
+
+<body>
+
+<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
+<h1>파일 업로드</h1>
+<div>
+  <form method="post" action="/process/file" enctype="multipart/form-data">
+    <table border="1">
+      <tr>
+        <td><label width="50px">파일 업로드 하기</label></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="cr_name" placeholder="작성자 이름"></td>
+      </tr>
+      <tr>
+        <td><input type="file" name="file"></td>
+      </tr>
+      <tr>
+        <td>
+          <input type="submit" value="파일 업로드" name="submit">
+        </td>
+      </tr>
+    </table>
+
+  </form>
+</div>
+<br/>
+<br/>
+<div>
+  <input type="text" id="txt" placeholder="아무거나 적기">
+  <input type="button" id="btnSend" value="이동"></input>
+</div>
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnSend").click(function () {
+            $.ajax({
+                url: "/login",
+                type: "post",
+                async: true,
+                data: {text: $("#txt").val()},
+                dataType: "json",
+                success: function (data) {
+                    alert("send success");
+                },
+                error: function () {
+                    alert("send fail");
+                }
+            })
+        })
+    })
+</script>
+
+</html>

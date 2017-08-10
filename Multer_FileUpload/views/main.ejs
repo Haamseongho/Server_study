@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>업로드 파일 불러오기</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"
+            data-do-not-move="true" data-provides="jQuery"></script>
+</head>
+
+<body>
+<h1>업로드 된 파일 불러오기</h1>
+<div>
+    <input type="text" id="cr_name2" placeholder="파일 작성자 이름">
+    <input type="button" id="loadFileBtn" value="파일 불러오기">
+</div>
+
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#loadFileBtn").click(function () {
+            alert("눌림");
+            $.ajax({
+                url: "/load/files",
+                type: "get",
+                async: true,
+                data: {
+                    cr_name: $("#cr_name2").val()
+                },
+                dataType: "json",
+                success: function (data) {
+                    checkDataFromRouter();
+                },
+                error: function () {
+                    alert("작성자 이름이 전송되는 데에 실패하였습니다.");
+                }
+            })
+        })
+    })
+</script>
+<script type="text/javascript">
+    function checkDataFromRouter() {
+        console.log("send well");
+    }
+</script>
+
+</html>
