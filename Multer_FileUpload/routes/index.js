@@ -25,7 +25,6 @@ router.get('/', function (req, res, next) {
 });
 
 
-
 var storage = multer.diskStorage({
     destination: function (req, file, callback) {
         callback(null, 'uploads/');
@@ -44,16 +43,16 @@ router.post("/process/file", upload, function (req, res, next) {
     var upFile = req.file;
 
 
-  /*
-   파일 업로드
-   */
+    /*
+     파일 업로드
+     */
     // DB save
 
     Files.collection.insert({cr_name: cr_name, created_at: Date.now(), upFile: upFile}, function (err, file) {
         if (err) return next(err);
         else {
             console.log("insert file well");
-            res.status(200).render("main");
+            res.status(200).render("main", {fileExt: upFile.originalname.split(".")[1]});
         }
     })
 });
