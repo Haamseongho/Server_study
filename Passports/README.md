@@ -31,7 +31,7 @@
 
 ### [페이스북 예시]
 
-<img src="./images/facebook_passport1.PNG" />
+<img src="./images/facebook_passport1.png" />
 
 
 
