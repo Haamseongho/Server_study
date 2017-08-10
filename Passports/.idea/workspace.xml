@@ -91,8 +91,13 @@
       <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/login.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="253">
               <caret line="13" column="44" lean-forward="true" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+=======
+            <state relative-caret-position="368">
+              <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+>>>>>>> 1354c99c18b54b0c078bc654af24b694f0d69f1d
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
@@ -323,13 +328,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1502334063369</updated>
+<<<<<<< HEAD
       <workItem from="1502334079851" duration="433000" />
       <workItem from="1502342342628" duration="2169000" />
+=======
+      <workItem from="1502334079851" duration="1324000" />
+>>>>>>> 1354c99c18b54b0c078bc654af24b694f0d69f1d
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="2608000" />
+=======
+    <option name="totallyTimeSpent" value="1324000" />
+>>>>>>> 1354c99c18b54b0c078bc654af24b694f0d69f1d
   </component>
   <component name="ToolWindowManager">
     <frame x="33" y="242" width="1121" height="966" extended-state="0" />
@@ -547,6 +560,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+<<<<<<< HEAD
           <folding>
             <element signature="e#0#42#0" expanded="false" />
           </folding>
@@ -651,6 +665,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="69" column="5" lean-forward="true" selection-start-line="62" selection-start-column="4" selection-end-line="69" selection-end-column="5" />
+=======
+>>>>>>> 1354c99c18b54b0c078bc654af24b694f0d69f1d
           <folding>
             <element signature="e#0#42#0" expanded="false" />
           </folding>

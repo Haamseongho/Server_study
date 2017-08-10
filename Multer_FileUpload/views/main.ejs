@@ -17,8 +17,9 @@
 <body>
 <h1>업로드 된 파일 불러오기</h1>
 <div>
-    <input type="text" id="cr_name2" placeholder="파일 작성자 이름">
+    <input type="text" id="filename" placeholder="파일 이름 작성하기">
     <input type="button" id="loadFileBtn" value="파일 불러오기">
+    <input type="hidden" id="fileExt" value="<%= fileExt %>">
 </div>
 
 
@@ -32,14 +33,14 @@
                 type: "get",
                 async: true,
                 data: {
-                    cr_name: $("#cr_name2").val()
+                    filename: $("#filename").val() + "." + $("#fileExt").val()
                 },
                 dataType: "json",
                 success: function (data) {
                     checkDataFromRouter();
                 },
                 error: function () {
-                    alert("작성자 이름이 전송되는 데에 실패하였습니다.");
+                    alert("해당 파일이 존재하지 않습니다.");
                 }
             })
         })
